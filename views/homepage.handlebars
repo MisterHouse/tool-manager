@@ -1,9 +1,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Tool Manager</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 </head>
 <body>
-    
+    <div id="template1area"></div>
+    <script src="myHandlebars.js">
+    <script id="template1" type="text/x-handlebars">
+  <h2>{{name}}</h2>
+
+  {{#if category}}
+    <strong>Category: </strong> {{category}}<br>
+  {{/if}}
+
+  <strong>Link: </strong>
+  {{#if link}}
+    <a href ="{{link}}">{{link}}</a>
+  {{else}}
+    none
+  {{/if}}
+
+  <p>
+  {{#if miscellaneous}}
+    {{{miscellaneous}}}
+  {{/if}}
+  </p>
+</script>
+</script>
 </body>
 </html>
